@@ -13,9 +13,11 @@ import ArrowButton from "../components/ArrowButton.astro";
 			document.addEventListener("scroll", () => {
 				if( window.scrollY == 0){
 					button.style.opacity = "0";
+					button.style.cursor = "default";
 				}
 				else {
 					button.style.opacity = "1";
+					button.style.cursor = "pointer";
 				}
 			});
 		});
