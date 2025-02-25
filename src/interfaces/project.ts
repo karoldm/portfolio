@@ -1,0 +1,15 @@
+import { IconName } from "./icon";
+
+interface LinkOptions {
+  href: string;
+  label: string;
+}
+
+export interface ProjectInfo {
+  title: string;
+  description: string;
+  stackList: IconName[];
+  links: LinkOptions[];
+  images: string[];
+  tags: string[];
+}

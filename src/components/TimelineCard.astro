@@ -1,0 +1,69 @@
+---
+import Text from './Text.astro';
+
+interface Props {
+  year: string;
+  description: string;
+}
+
+const { year, description } = Astro.props;
+---
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const timelineCards = document.querySelectorAll('.timeline-card') as NodeListOf<HTMLElement>;
+    const reversedTimelineCards = Array.from(timelineCards).reverse();
+
+    function addAnimation() {
+      reversedTimelineCards.forEach((card, index) => {
+        setTimeout(() => {
+          card.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
+          card.style.opacity = '1';
+          card.style.transform = 'translateX(0)';
+        }, index * 500);
+      });
+    }
+
+    function clearAnimation() {
+      reversedTimelineCards.forEach((card, index) => {
+        card.style.transition = 'all 0s linear';
+        card.style.opacity = '0';
+        card.style.transform = 'translateX(-100%)';
+      });
+    }
+
+    addAnimation();
+  });
+</script>
+
+<div class:list={["timeline-card"]}>
+  <Text size="1rem" weight={600}>{year}</Text>
+  <Text weight={300}>
+    {description.split('\n').map(line => <>
+      {line} <br />
+    </>)}
+  </Text>
+</div>
+
+<style>
+  .timeline-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: start;
+    justify-content: start;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    padding: 16px;
+    width: 240px;
+
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+ 
+  @media screen and (max-width: 880px){
+    .timeline-card {
+      width: 100%;
+    }
+  }
+</style>

@@ -1,0 +1,54 @@
+---
+import { Icon } from 'astro-icon/components';
+import { IconName } from '../interfaces/icon';
+import Text from './Text.astro';
+
+interface Props {
+  iconName?: IconName;
+  label: string;
+  color?: string;
+  highlight?: boolean;
+}
+
+const {iconName, label, color, highlight = false} = Astro.props
+---
+
+<div class:list={highlight ? ["container", "highlight"] : ["container"]}>
+  <div class="tag">
+    {iconName ? <Icon name={iconName} style={{color: color}} /> : <></>}
+    <Text>{label}</Text>
+  </div>
+</div>
+
+<style>
+  .tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem 1rem;
+    font-size: .9rem;
+    min-width: 80px;
+    gap: 8px;
+    background-color: var(--color-white);
+    -webkit-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.24);
+    -moz-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.24);
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.24);
+    border-radius: 32px;
+  }
+
+  [data-icon] {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+  }
+
+  .highlight {
+    background: linear-gradient(90deg, rgba(255,0,39,0.5) 0%, rgba(89,0,255,0.5) 100%) !important;
+    padding: 1px;
+  }
+
+  .container {
+    border-radius: 32px;
+    background: transparent;
+    min-width: 0;
+  }
+</style>

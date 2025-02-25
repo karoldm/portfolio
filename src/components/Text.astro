@@ -1,0 +1,21 @@
+---
+interface Props {
+  weight?: number;
+  color?: string;
+  size?: string;
+  classlist?: string[];
+  lineHeight?: number;
+};
+
+const { weight=400, color="var(--color-text)", size=".9rem", classlist=[], lineHeight=1.5} = Astro.props
+---
+
+<span class:list={classlist} style={{fontWeight: weight, color: color, fontSize: size, lineHeight: lineHeight}}>
+  <slot />
+</span>
+
+<style>
+  span {
+    font-family: "Kanit";
+  }
+</style>

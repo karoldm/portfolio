@@ -1,0 +1,49 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector("#scroll-button") as HTMLButtonElement;
+
+    button.addEventListener("click", () => { 
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+   });
+</script>
+
+<div>
+  <button id="scroll-button">
+    <Icon name="arrow"/>
+  </button>
+</div>
+
+<style>
+  button {
+    border-radius: 100%;
+    background: var(--color-primary);
+    padding: 8px;
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(50%);
+    width: 32px;
+    border:none;
+    outline: none;
+    height: 32px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    transition: all 0.5s linear;
+  }
+
+  [data-icon] {
+    font-size: 1.5rem;
+    color: var(--color-white);
+  }
+</style>

@@ -1,14 +1,52 @@
+---
+import ArrowButton from "../components/ArrowButton.astro";
+
+---
+
+<script>
+	  document.addEventListener("DOMContentLoaded", () => {
+			const button = document.querySelector("#scroll-button") as HTMLButtonElement;
+			if(button){
+				button.style.opacity = "0";
+			}
+
+			document.addEventListener("scroll", () => {
+				if( window.scrollY == 0){
+					button.style.opacity = "0";
+				}
+				else {
+					button.style.opacity = "1";
+				}
+			});
+		});
+</script>
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Karolyne Marques - Software Developer with a degree in Computer Science. Specializing in web and mobile development using React, Angular, Flutter, and Java. Explore my portfolio and projects." />
+		<meta name="keywords" content="software developer, computer science, web development, mobile development, React, Angular, Flutter, Java, javascript, typescript, frontend, portfolio, projects, Karolyne Marques, unesp" />
+		<meta name="author" content="Karolyne Marques" />
+		<meta name="robots" content="index, follow" />
+		<meta property="og:title" content="Karolyne Marques - Software Developer" />
+		<meta property="og:description" content="Karolyne Marques - Software Developer with a degree in Computer Science. Specializing in web and mobile development using React, Angular, Flutter, and Java." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://karoldm.github.io/portfolio" />
+		<meta property="og:image" content="https://karoldm.github.io/portfolio/images/profile.webp" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Karolyne Marques - Software Developer" />
+		<meta name="twitter:description" content="Karolyne Marques - Software Developer with a degree in Computer Science. Specializing in web and mobile development using React, Angular, Flutter, and Java." />
+		<meta name="twitter:image" content="https://karoldm.github.io/portfolio/images/profile.webp" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="canonical" href="https://karoldm.github.io/portfolio" />
+		<title>Karolyne Marques - Software Developer</title>
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
 	</head>
 	<body>
 		<slot />
+		<ArrowButton id="scroll-button" />
 	</body>
 </html>
 

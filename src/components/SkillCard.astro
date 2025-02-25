@@ -1,0 +1,45 @@
+---
+import { Icon } from 'astro-icon/components';
+import { IconName } from '../interfaces/icon';
+import Text from './Text.astro';
+
+interface Props {
+  iconName: IconName;
+  title: string;
+  description: string;
+}
+
+const { description, iconName, title } = Astro.props;
+---
+
+<div>
+  <Icon name={iconName} />
+  <Text weight={600} size="1rem">{title}</Text>
+  <Text >{description}</Text>
+</div>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+    flex: 1;
+    text-align: start;
+  }
+
+  @media screen and (max-width: 700px) {
+    div {
+      width: 100%;
+      flex: none;
+    }
+  }
+    
+  }
+
+  [data-icon] {
+    font-size: 2rem;
+    color: var(--color-primary);
+  }
+</style>

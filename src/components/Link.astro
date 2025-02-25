@@ -1,0 +1,91 @@
+---
+import Text from './Text.astro';
+
+interface Props {
+  href: string;
+  label: string;
+  disabled?: boolean;
+  tooltip?: string;
+}
+
+const { href, label, disabled = false, tooltip } = Astro.props;
+---
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tooltipContainers = document.querySelectorAll('.tooltip-container');
+    
+    tooltipContainers.forEach(tooltipContainer => {
+      const tooltipContent = tooltipContainer.querySelector(".tooltip-content") as HTMLElement;
+
+      if (tooltipContainer && tooltipContent) {
+        tooltipContainer.addEventListener('mouseenter', () => {
+          tooltipContent.style.opacity = "1";
+          tooltipContent.style.visibility = "visible";
+        });
+
+        tooltipContainer.addEventListener('mouseout', () => {
+          tooltipContent.style.opacity = "0";
+          tooltipContent.style.visibility = "hidden";
+        });
+      }
+    });
+  });
+</script>
+
+<div class="tooltip-container">
+  {!disabled ? (
+    <a class="link" href={href} target="_blank">{label}</a>
+  ) : (
+    <span class:list={["disabled", "link"]}>{label}</span>
+  )}
+  {tooltip && (
+    <div class="tooltip-content">
+      <Text color="var(--color-white)">{tooltip}</Text>
+    </div>
+  )}
+</div>
+
+<style>
+  .tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip-content {
+    position: absolute;
+    top: calc(100% + 4px);  
+    left: 0;
+    background-color: var(--color-medium);
+    border-radius: 8px;
+    padding: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s linear;
+  }
+
+  .link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    border-radius: 32px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    width: 120px;
+    font-family: "Kanit";
+    font-weight: 400;
+    font-size: .9rem;
+    color: var(--color-border);
+    transition: background-color 0.3s ease;
+  }
+
+  .disabled {
+    background-color: var(--color-hover);
+    cursor: default;
+  }
+
+  .link:hover {
+    background-color: var(--color-hover);
+  }
+</style>

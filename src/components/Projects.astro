@@ -1,0 +1,67 @@
+---
+import { projects } from '../config/projects';
+import ProjectCard from './ProjectCard.astro';
+import SkillCard from "./SkillCard.astro";
+---
+
+<>
+  <section>
+    <div class="row">
+      <SkillCard 
+        iconName="webpage" 
+        title="Web Development" 
+        description="Proficient in building responsive web apps with React.js, Angular, and Spring Boot. Skilled in UI/UX design, RESTful API integration, and backend development, focused on delivering high-performance solutions." 
+      />
+      <SkillCard 
+        iconName="mobile" 
+        title="Mobile Development" 
+        description="Experienced in developing cross-platform mobile apps with Flutter. Skilled in responsive design, state management, and backend integration for Android and iOS platforms." 
+      />
+      <SkillCard 
+        iconName="database" 
+        title="Software Development" 
+        description="Skilled in Java for building software solutions. Strong foundation in OOP, data structures, and algorithms, with a focus on clean, maintainable code." 
+      />
+      <!-- <SkillCard iconName="game" title="Game Development" description="Transforming ideas into exceptional apps experiences with hibrid and native technologies like flutter, swift and kotlin" /> -->
+    </div>
+    <div class="grid">
+      {projects.map(project => <ProjectCard 
+      project={project} />)}
+    </div>
+  </section>
+</>
+
+<style>
+   section {
+    padding: 64px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .row {
+    display: flex;
+    width: 100%;  
+    gap: 48px;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media screen and (max-width: 780px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media screen and (max-width: 880px){
+    .section {
+      padding: 16px;
+    }
+  }
+</style>

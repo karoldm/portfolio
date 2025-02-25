@@ -1,0 +1,134 @@
+---
+import { stacks } from "../config/stacks";
+import Avatar from "./Avatar.astro";
+import CopyField from "./CopyField.astro";
+import Link from "./Link.astro";
+import Tag from "./Tag.astro";
+import Text from "./Text.astro";
+import TimelineCard from "./TimelineCard.astro";
+---
+
+<div>
+    <section>
+      <div class="row">
+        <CopyField value="karoldm1579@gmail.com" />
+
+        <div class="actions">
+          <Link disabled tooltip="Available soon" href="" label="Blog" />
+          <Link href="https://github.com/karoldm" label="Github" />
+          <Link href="https://www.linkedin.com/in/karoldm/" label="Linkedin" />
+          <!-- <Link href="" label="Notion" /> -->
+        </div>
+      </div>
+
+      <div class="column">
+        <Avatar src="/images/profile.webp" />
+        <Text lineHeight={1} size="24px" weight={600} >
+          Karolyne Marques
+        </Text>
+        <Text lineHeight={1} size="16px" weight={600} classlist={["linear-text"]} >
+          Bachelor of Computer Science
+        </Text>
+        <Text lineHeight={1} size="16px" weight={600} classlist={["linear-text"]} >
+          Software Developer
+        </Text>
+      </div>
+
+      <div id="timeline">
+        <TimelineCard year="🎓 2020" description="FCT UNESP - Computer Science" />
+        <TimelineCard year="👩‍💻 2021" description="Member of EJComp" />
+        <TimelineCard year="🗣 2022" description="Vice President of EJComp" />
+        <TimelineCard year="🚀 2023" description="President of EJComp\nIntern at Eventials" />
+        <TimelineCard year="📚 2024" description="Frontend Intern/Junior at Vlab" />
+      </div>
+    </section>
+
+    <section>
+      {stacks.map(stack => <Tag iconName={stack.icon} label={stack.label} />)}
+    </section>
+</div>
+
+<style>
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: start;
+    gap: 8px;
+    flex-wrap: wrap;
+
+  }
+
+  .row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+
+  section:first-child {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--color-background);
+    border-radius: 0 0 32px 32px;
+
+    padding: 32px;
+  }
+
+  #timeline {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    overflow: hidden; 
+  }
+
+  .inner-div {
+    opacity: 0;
+    transform: translateX(-100%); 
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+  .inner-div.visible {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+
+  section:nth-child(2) {
+    background: var(--color-white);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    padding: 64px 32px;
+  }
+
+  @media screen and (max-width: 880px){
+    .actions {
+      justify-content: center;
+      width: 100%;
+    }
+
+    section:first-child {
+      padding: 16px 16px 64px 16px;
+    }
+
+    section:last-child {
+      padding: 32px 16px;
+    }
+  }
+</style>
+

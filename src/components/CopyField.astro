@@ -1,0 +1,91 @@
+---
+import Text from './Text.astro';
+
+interface Props {
+  value: string;
+}
+
+const { value } = Astro.props;
+---
+
+<script>
+  function copyValue(value: string) {
+    navigator.clipboard.writeText(value)
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const copyButtons = document.querySelectorAll('.copy-button');
+
+    if (copyButtons) {
+      copyButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const value = (button as HTMLButtonElement).value;
+          copyValue(value);
+        });
+      });
+    }
+  });
+</script>
+
+<div class="container">
+  <Text>{value}</Text>
+ <div class="row">
+    <button class="copy-button" type="button" value={value}>
+      <Text>copy</Text>
+    </button>
+    <!-- <a class="copy-button" target="_blank" href={`mailto:${value}`}>
+      <Text>mail to</Text>
+    </a> -->
+ </div>
+</div>
+
+<style>
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    border-radius: 32px;
+    max-width: 390px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-background);
+    padding: 6px 8px 6px 12px;
+  }
+
+  @media screen and (max-width: 880px){
+    .container {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  p {
+    flex: 1;
+  }
+
+  .copy-button {
+    text-decoration: none;
+    padding: 4px 16px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 32px;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    cursor: pointer;
+
+    transition: all 1s linear;
+  }
+
+  button:hover {
+    background-color: var(--color-hover);
+  }
+</style>
