@@ -1,38 +1,57 @@
 import { ProjectInfo } from "../interfaces/project";
 
 // Import images
-import kboardImage1 from "../assets/images/kboard/image1.webp";
-import kboardImage2 from "../assets/images/kboard/image2.webp";
-import kboardImage3 from "../assets/images/kboard/image3.webp";
-import kboardImage4 from "../assets/images/kboard/image4.webp";
-import kboardImage5 from "../assets/images/kboard/image5.webp";
-import kboardImage6 from "../assets/images/kboard/image6.webp";
+import kboardImage1 from "../assets/images/kboard/image1.jpg";
+import kboardImage2 from "../assets/images/kboard/image2.jpg";
+import kboardImage3 from "../assets/images/kboard/image3.jpg";
+import kboardImage4 from "../assets/images/kboard/image4.jpg";
+import kboardImage5 from "../assets/images/kboard/image5.jpg";
+import kboardImage6 from "../assets/images/kboard/image6.jpg";
 
-import devbookImage1 from "../assets/images/devbook/image1.webp";
-import devbookImage2 from "../assets/images/devbook/image2.webp";
-import devbookImage3 from "../assets/images/devbook/image3.webp";
+import devbookImage1 from "../assets/images/devbook/image1.jpg";
+import devbookImage2 from "../assets/images/devbook/image2.jpg";
+import devbookImage3 from "../assets/images/devbook/image3.jpg";
 
-import letmeaskImage1 from "../assets/images/letmeask/image1.webp";
-import letmeaskImage2 from "../assets/images/letmeask/image2.webp";
-import letmeaskImage3 from "../assets/images/letmeask/image3.webp";
-import letmeaskImage4 from "../assets/images/letmeask/image4.webp";
-import letmeaskImage5 from "../assets/images/letmeask/image5.webp";
-import letmeaskImage6 from "../assets/images/letmeask/image6.webp";
-import letmeaskImage7 from "../assets/images/letmeask/image7.webp";
+import letmeaskImage1 from "../assets/images/letmeask/image1.jpg";
+import letmeaskImage2 from "../assets/images/letmeask/image2.jpg";
+import letmeaskImage3 from "../assets/images/letmeask/image3.jpg";
+import letmeaskImage4 from "../assets/images/letmeask/image4.jpg";
+import letmeaskImage5 from "../assets/images/letmeask/image5.jpg";
+import letmeaskImage6 from "../assets/images/letmeask/image6.jpg";
+import letmeaskImage7 from "../assets/images/letmeask/image7.jpg";
 
-import myplantsImage1 from "../assets/images/myplants/image1.webp";
-import myplantsImage2 from "../assets/images/myplants/image2.webp";
-import myplantsImage3 from "../assets/images/myplants/image3.webp";
-import myplantsImage4 from "../assets/images/myplants/image4.webp";
-import myplantsImage5 from "../assets/images/myplants/image5.webp";
+import myplantsImage1 from "../assets/images/myplants/image1.jpg";
+import myplantsImage2 from "../assets/images/myplants/image2.jpg";
+import myplantsImage3 from "../assets/images/myplants/image3.jpg";
+import myplantsImage4 from "../assets/images/myplants/image4.jpg";
+import myplantsImage5 from "../assets/images/myplants/image5.jpg";
+import myplantsImage6 from "../assets/images/myplants/image6.jpg";
+import myplantsImage7 from "../assets/images/myplants/image7.jpg";
 
-import notesImage1 from "../assets/images/notes/image1.webp";
-import notesImage2 from "../assets/images/notes/image2.webp";
-import notesImage3 from "../assets/images/notes/image3.webp";
+import notesImage1 from "../assets/images/notes/image1.jpg";
+import notesImage2 from "../assets/images/notes/image2.jpg";
+import notesImage3 from "../assets/images/notes/image3.jpg";
+import notesImage4 from "../assets/images/notes/image4.jpg";
+import notesImage5 from "../assets/images/notes/image5.jpg";
 
-import shorturlImage1 from "../assets/images/shorturl/image1.webp";
-import shorturlImage2 from "../assets/images/shorturl/image2.webp";
-import shorturlImage3 from "../assets/images/shorturl/image3.webp";
+import shorturlImage1 from "../assets/images/shorturl/image1.jpg";
+import shorturlImage2 from "../assets/images/shorturl/image2.jpg";
+import shorturlImage3 from "../assets/images/shorturl/image3.jpg";
+
+import rotaseguraimage1 from "../assets/images/rota-segura/image1.jpg";
+import rotaseguraimage10 from "../assets/images/rota-segura/image10.png";
+import rotaseguraimage2 from "../assets/images/rota-segura/image2.png";
+import rotaseguraimage3 from "../assets/images/rota-segura/image3.png";
+import rotaseguraimage4 from "../assets/images/rota-segura/image4.png";
+import rotaseguraimage5 from "../assets/images/rota-segura/image5.png";
+import rotaseguraimage6 from "../assets/images/rota-segura/image6.png";
+import rotaseguraimage7 from "../assets/images/rota-segura/image7.png";
+import rotaseguraimage8 from "../assets/images/rota-segura/image8.png";
+import rotaseguraimage9 from "../assets/images/rota-segura/image9.png";
+
+import pokedexImage1 from "../assets/images/pokedex/image1.jpg";
+import pokedexImage2 from "../assets/images/pokedex/image2.jpg";
+import pokedexImage3 from "../assets/images/pokedex/image3.jpg";
 
 export const projects: ProjectInfo[] = [
   {
@@ -110,6 +129,8 @@ export const projects: ProjectInfo[] = [
       myplantsImage3,
       myplantsImage4,
       myplantsImage5,
+      myplantsImage6,
+      myplantsImage7,
     ],
     stackList: ["dart", "flutter"],
   },
@@ -122,7 +143,7 @@ export const projects: ProjectInfo[] = [
       { label: "Frontend", href: "https://github.com/karoldm/notes" },
       { label: "Site", href: "https://karoldm.github.io/notes/" },
     ],
-    images: [notesImage1, notesImage2, notesImage3],
+    images: [notesImage1, notesImage2, notesImage3, notesImage4, notesImage5],
     stackList: ["tailwindcss", "react", "typescript"],
   },
   {
@@ -137,5 +158,44 @@ export const projects: ProjectInfo[] = [
     ],
     images: [shorturlImage1, shorturlImage2, shorturlImage3],
     stackList: ["angular", "aws", "java"],
+  },
+  {
+    title: "Rota segura",
+    tags: ["Mobile"],
+    description:
+      "Rota Segura helps police and firefighters reach rural homes where Google Maps struggles. Users can map routes with images and descriptions, and in emergencies, their route is sent to an admin for quick response.",
+    links: [
+      {
+        label: "Repository",
+        href: "https://github.com/karoldm/rota-segura-app",
+      },
+    ],
+    images: [
+      rotaseguraimage1,
+      rotaseguraimage2,
+      rotaseguraimage3,
+      rotaseguraimage4,
+      rotaseguraimage5,
+      rotaseguraimage6,
+      rotaseguraimage7,
+      rotaseguraimage8,
+      rotaseguraimage9,
+      rotaseguraimage10,
+    ],
+    stackList: ["dart", "flutter", "firebase"],
+  },
+  {
+    title: "Pokedex",
+    tags: ["Mobile"],
+    description:
+      "A simple pokedex app that shows some pokemons from a public API.",
+    links: [
+      {
+        label: "Repository",
+        href: "https://github.com/karoldm/pokedex",
+      },
+    ],
+    images: [pokedexImage1, pokedexImage2, pokedexImage3],
+    stackList: ["dart", "flutter"],
   },
 ];
