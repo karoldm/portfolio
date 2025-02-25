@@ -35,7 +35,7 @@ const { images } = Astro.props;
           if (i === 0) {
             resetImages();
           } else {
-            img.style.left = '164px';
+            img.style.left = '200px';
             img.style.animation = `next ${nextAnimationTime}s linear`;
           }
         });
@@ -50,8 +50,8 @@ const { images } = Astro.props;
       <Image
         src={src}
         alt="project image"
-        width={164} 
-        height={290} 
+        width={180} 
+        height={350} 
         class="pic"
       />
     ))}
@@ -67,13 +67,13 @@ const { images } = Astro.props;
       transform: rotate(15deg);
     }
     100% {
-      left: 164px;
+      left: 200px;
     }
   }
 
   @keyframes back {
     0% {
-      left: 164px;
+      left: 200px;
     }
     100% {
       left: 0;
@@ -82,9 +82,8 @@ const { images } = Astro.props;
 
   .pic-ctn {
     position: relative;
-    object-fit: cover;
-    width: 164px;
-    height: 290px;
+    width: 200px;
+    height: 350px;
     overflow: hidden;
   }
 
