@@ -35,7 +35,7 @@ const { images } = Astro.props;
           if (i === 0) {
             resetImages();
           } else {
-            img.style.left = '200px';
+            img.style.left = '180px';
             img.style.animation = `next ${nextAnimationTime}s linear`;
           }
         });
@@ -67,13 +67,13 @@ const { images } = Astro.props;
       transform: rotate(15deg);
     }
     100% {
-      left: 200px;
+      left: 180px;
     }
   }
 
   @keyframes back {
     0% {
-      left: 200px;
+      left: 180px;
     }
     100% {
       left: 0;
@@ -82,9 +82,10 @@ const { images } = Astro.props;
 
   .pic-ctn {
     position: relative;
-    width: 200px;
+    width: 180px;
     height: 350px;
     overflow: hidden;
+    border-radius: 8px;
   }
 
   .pic {
