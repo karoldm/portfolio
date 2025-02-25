@@ -1,0 +1,20 @@
+---
+import Text from "./Text.astro";
+
+const year = new Date().getFullYear();
+---
+
+<footer>
+    <Text>&copy; Karolyne Marques { year }. All rights reserved ❤️.</Text>
+</footer>
+
+<style>
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        background-color: var(--color-background);
+        width: 100%;
+    }
+</style>
