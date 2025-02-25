@@ -1,5 +1,39 @@
 import { ProjectInfo } from "../interfaces/project";
 
+// Import images
+import kboardImage1 from "../assets/images/kboard/image1.webp";
+import kboardImage2 from "../assets/images/kboard/image2.webp";
+import kboardImage3 from "../assets/images/kboard/image3.webp";
+import kboardImage4 from "../assets/images/kboard/image4.webp";
+import kboardImage5 from "../assets/images/kboard/image5.webp";
+import kboardImage6 from "../assets/images/kboard/image6.webp";
+
+import devbookImage1 from "../assets/images/devbook/image1.webp";
+import devbookImage2 from "../assets/images/devbook/image2.webp";
+import devbookImage3 from "../assets/images/devbook/image3.webp";
+
+import letmeaskImage1 from "../assets/images/letmeask/image1.webp";
+import letmeaskImage2 from "../assets/images/letmeask/image2.webp";
+import letmeaskImage3 from "../assets/images/letmeask/image3.webp";
+import letmeaskImage4 from "../assets/images/letmeask/image4.webp";
+import letmeaskImage5 from "../assets/images/letmeask/image5.webp";
+import letmeaskImage6 from "../assets/images/letmeask/image6.webp";
+import letmeaskImage7 from "../assets/images/letmeask/image7.webp";
+
+import myplantsImage1 from "../assets/images/myplants/image1.webp";
+import myplantsImage2 from "../assets/images/myplants/image2.webp";
+import myplantsImage3 from "../assets/images/myplants/image3.webp";
+import myplantsImage4 from "../assets/images/myplants/image4.webp";
+import myplantsImage5 from "../assets/images/myplants/image5.webp";
+
+import notesImage1 from "../assets/images/notes/image1.webp";
+import notesImage2 from "../assets/images/notes/image2.webp";
+import notesImage3 from "../assets/images/notes/image3.webp";
+
+import shorturlImage1 from "../assets/images/shorturl/image1.webp";
+import shorturlImage2 from "../assets/images/shorturl/image2.webp";
+import shorturlImage3 from "../assets/images/shorturl/image3.webp";
+
 export const projects: ProjectInfo[] = [
   {
     title: "K-board",
@@ -12,12 +46,12 @@ export const projects: ProjectInfo[] = [
       { label: "Site", href: "https://k-board.onrender.com" },
     ],
     images: [
-      "/images/kboard/image1.webp",
-      "/images/kboard/image2.webp",
-      "/images/kboard/image3.webp",
-      "/images/kboard/image4.webp",
-      "/images/kboard/image5.webp",
-      "/images/kboard/image6.webp",
+      kboardImage1,
+      kboardImage2,
+      kboardImage3,
+      kboardImage4,
+      kboardImage5,
+      kboardImage6,
     ],
     stackList: [
       "react",
@@ -39,11 +73,7 @@ export const projects: ProjectInfo[] = [
       { label: "Frontend", href: "https://github.com/karoldm/devbook" },
       { label: "Site", href: "https://devbook-d8fr.onrender.com/" },
     ],
-    images: [
-      "/images/devbook/image1.webp",
-      "/images/devbook/image2.webp",
-      "/images/devbook/image3.webp",
-    ],
+    images: [devbookImage1, devbookImage2, devbookImage3],
     stackList: ["react", "typescript", "styled-components"],
   },
   {
@@ -56,13 +86,13 @@ export const projects: ProjectInfo[] = [
       { label: "Site", href: "https://letmeask.onrender.com/" },
     ],
     images: [
-      "/images/letmeask/image1.webp",
-      "/images/letmeask/image2.webp",
-      "/images/letmeask/image3.webp",
-      "/images/letmeask/image4.webp",
-      "/images/letmeask/image5.webp",
-      "/images/letmeask/image6.webp",
-      "/images/letmeask/image7.webp",
+      letmeaskImage1,
+      letmeaskImage2,
+      letmeaskImage3,
+      letmeaskImage4,
+      letmeaskImage5,
+      letmeaskImage6,
+      letmeaskImage7,
     ],
     stackList: ["react", "typescript", "scss", "firebase"],
   },
@@ -75,11 +105,11 @@ export const projects: ProjectInfo[] = [
       { label: "Repository", href: "https://github.com/karoldm/myplants" },
     ],
     images: [
-      "/images/myplants/image1.webp",
-      "/images/myplants/image2.webp",
-      "/images/myplants/image3.webp",
-      "/images/myplants/image4.webp",
-      "/images/myplants/image5.webp",
+      myplantsImage1,
+      myplantsImage2,
+      myplantsImage3,
+      myplantsImage4,
+      myplantsImage5,
     ],
     stackList: ["dart", "flutter"],
   },
@@ -92,11 +122,7 @@ export const projects: ProjectInfo[] = [
       { label: "Frontend", href: "https://github.com/karoldm/notes" },
       { label: "Site", href: "https://karoldm.github.io/notes/" },
     ],
-    images: [
-      "/images/notes/image1.webp",
-      "/images/notes/image2.webp",
-      "/images/notes/image3.webp",
-    ],
+    images: [notesImage1, notesImage2, notesImage3],
     stackList: ["dart", "flutter"],
   },
   {
@@ -109,11 +135,7 @@ export const projects: ProjectInfo[] = [
       { label: "Backend", href: "https://github.com/karoldm/short-url-client" },
       { label: "Site", href: "https://karoldm.github.io/short-url-client/" },
     ],
-    images: [
-      "/images/shorturl/image1.webp",
-      "/images/shorturl/image2.webp",
-      "/images/shorturl/image3.webp",
-    ],
+    images: [shorturlImage1, shorturlImage2, shorturlImage3],
     stackList: ["angular", "aws", "java"],
   },
 ];

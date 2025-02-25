@@ -1,4 +1,5 @@
 ---
+import profile from '../assets/images/profile.webp';
 import { stacks } from "../config/stacks";
 import Avatar from "./Avatar.astro";
 import CopyField from "./CopyField.astro";
@@ -22,7 +23,7 @@ import TimelineCard from "./TimelineCard.astro";
       </div>
 
       <div class="column">
-        <Avatar src="/images/profile.webp" />
+        <Avatar src={profile} />
         <Text lineHeight={1} size="24px" weight={600} >
           Karolyne Marques
         </Text>

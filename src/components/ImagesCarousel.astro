@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
   images: string[];
 }
@@ -17,12 +19,11 @@ const { images } = Astro.props;
 
       function resetImages() {
         images.forEach((img, i) => {
-          if(i == 0) return;
+          if (i == 0) return;
 
           img.style.animation = `back ${backAnimationTime}s linear`;
           img.style.animationDelay = `${i * backAnimationTime}s`;
 
-          // Garantir que o left volte para 0 após a animação
           setTimeout(() => {
             img.style.left = '0';
           }, (i * backAnimationTime + backAnimationTime) * 1000);
@@ -33,22 +34,27 @@ const { images } = Astro.props;
         img.addEventListener("click", () => {
           if (i === 0) {
             resetImages();
-          }
-          else {
+          } else {
             img.style.left = '164px';
             img.style.animation = `next ${nextAnimationTime}s linear`;
           }
-
         });
       });
-    } );
+    });
   });
 </script>
 
-
 <div>
   <div class="pic-ctn">
-    {images.map(src => <img src={src} alt="project image" class="pic">)}
+    {images.map((src) => (
+      <Image
+        src={src}
+        alt="project image"
+        width={164} 
+        height={290} 
+        class="pic"
+      />
+    ))}
   </div>
 </div>
 
@@ -82,9 +88,7 @@ const { images } = Astro.props;
     overflow: hidden;
   }
 
-  .pic-ctn > img {
-    width: 164px;
-    height: 290px;
+  .pic {
     position: absolute;
     top: 0;
     left: 0;

@@ -1,40 +1,49 @@
 ---
+import { Image } from 'astro:assets';
 
+// Define the Props interface for your component
 interface Props {
-  src: string
+  src: ImageMetadata;
 }
 
-const { src } = Astro.props
+// Destructure the src from Astro.props
+const { src } = Astro.props;
 ---
 
 <div class="container">
-  <img class="avatar" src={src} />
+  <Image
+    class="avatar"
+    src={src}
+    width={150} 
+    height={150} 
+    alt="User avatar"  
+  />
   <!-- <Tag iconName="hand" label="Karolyne Marques" /> -->
 </div>
 
 <style>
   .avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 8px solid white;
-  transition: transform 0.8s ease-in-out;
-  transform-style: preserve-3d;
-}
-
-@keyframes avatar-flip {
-  0% {
-    transform: perspective(300px) rotateY(0deg); 
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid white;
+    transition: transform 0.8s ease-in-out;
+    transform-style: preserve-3d;
   }
-  100% {
-    transform: perspective(300px) rotateY(360deg); 
-  }
-}
 
-.avatar:hover {
-  animation: avatar-flip 0.8s linear; 
-}
+  @keyframes avatar-flip {
+    0% {
+      transform: perspective(300px) rotateY(0deg);
+    }
+    100% {
+      transform: perspective(300px) rotateY(360deg);
+    }
+  }
+
+  .avatar:hover {
+    animation: avatar-flip 0.8s linear;
+  }
 
   .container {
     display: flex;

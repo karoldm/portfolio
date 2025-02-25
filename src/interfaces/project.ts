@@ -10,6 +10,6 @@ export interface ProjectInfo {
   description: string;
   stackList: IconName[];
   links: LinkOptions[];
-  images: string[];
+  images: ImageMetadata[];
   tags: string[];
 }
