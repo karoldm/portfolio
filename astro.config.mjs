@@ -8,4 +8,7 @@ export default defineConfig({
   site: "https://karoldm.github.io",
   base: "/portfolio",
   output: "static",
+  assets: {
+    version: true,
+  },
 });

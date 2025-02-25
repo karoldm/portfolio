@@ -34,7 +34,7 @@ const { href, label, disabled = false, tooltip } = Astro.props;
 
 <div class="tooltip-container">
   {!disabled ? (
-    <a class="link" href={href} target="_blank">{label}</a>
+    <a class="link" href={href} target="_blank" aria-label={label}>{label}</a>
   ) : (
     <span class:list={["disabled", "link"]}>{label}</span>
   )}
@@ -76,7 +76,7 @@ const { href, label, disabled = false, tooltip } = Astro.props;
     font-family: "Kanit";
     font-weight: 400;
     font-size: .9rem;
-    color: var(--color-border);
+    color: var(--color-text);
     transition: background-color 0.3s ease;
   }
 
