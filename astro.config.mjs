@@ -7,4 +7,5 @@ export default defineConfig({
   integrations: [icon()],
   site: "https://karoldm.github.io",
   base: "/portfolio",
+  output: "static",
 });
