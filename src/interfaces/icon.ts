@@ -25,4 +25,5 @@ export type IconName =
   | "c"
   | "docker"
   | "scss"
-  | "hand";
+  | "hand"
+  | "tailwindcss";

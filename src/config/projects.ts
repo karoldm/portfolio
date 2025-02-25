@@ -100,7 +100,7 @@ export const projects: ProjectInfo[] = [
     title: "MyPlants",
     tags: ["Mobile"],
     description:
-      "A mobile app to help users care for their plants efficiently. It provides personalized reminders for watering plants and offers detailed information about each species, such as ideal water intake and sun exposure. Perfect for gardening enthusiasts who want to keep their plants healthy.",
+      "A mobile app to help users care for their plants efficiently. It provides personalized reminders for watering plants and offers detailed information about each plant registered, such as ideal water intake and sun exposure. Perfect for gardening enthusiasts who want to keep their plants healthy.",
     links: [
       { label: "Repository", href: "https://github.com/karoldm/myplants" },
     ],
@@ -123,13 +123,13 @@ export const projects: ProjectInfo[] = [
       { label: "Site", href: "https://karoldm.github.io/notes/" },
     ],
     images: [notesImage1, notesImage2, notesImage3],
-    stackList: ["dart", "flutter"],
+    stackList: ["tailwindcss", "react", "typescript"],
   },
   {
     title: "Short URL",
     tags: ["Web", "Serveless"],
     description:
-      "A URL shortener developed to apply advanced AWS concepts such as API Gateway, Lambda, and S3. The application allows users to create short links and manage them efficiently, with access metrics and fast redirection. Perfect for those looking to learn or implement serverless solutions.",
+      "A URL shortener developed to apply advanced AWS concepts such as API Gateway, Lambda, and S3. The application allows users to create short links and manage them efficiently, with fast redirection. Perfect for those looking to learn or implement serverless solutions.",
     links: [
       { label: "Frontend", href: "https://github.com/karoldm/short-url" },
       { label: "Backend", href: "https://github.com/karoldm/short-url-client" },

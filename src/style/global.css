@@ -40,6 +40,22 @@
   --color-hover: #f0f0f0;
   --color-medium: #7e7e7e;
   --color-secondary: #141414;
+  --color-box-shadow: rgba(0, 0, 0, 0.24);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #f6f6f6;
+    --color-white: #000000;
+    --color-background: #353535;
+    --color-primary: #f0f0f0;
+    --color-border: #7e7e7e;
+    --color-black: #ffffff;
+    --color-hover: #2f2f2f;
+    --color-medium: #bdbdbd;
+    --color-secondary: #f6f6f6;
+    --color-box-shadow: rgba(255, 255, 255, 0.1);
+  }
 }
 
 *,

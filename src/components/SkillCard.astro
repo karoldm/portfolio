@@ -13,7 +13,7 @@ const { description, iconName, title } = Astro.props;
 ---
 
 <div>
-  <Icon name={iconName} />
+  <Icon size={28} name={iconName} />
   <Text weight={600} size="1rem">{title}</Text>
   <Text >{description}</Text>
 </div>
@@ -39,7 +39,6 @@ const { description, iconName, title } = Astro.props;
   }
 
   [data-icon] {
-    font-size: 2rem;
     color: var(--color-primary);
   }
 </style>

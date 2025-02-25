@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard.astro';
 import SkillCard from "./SkillCard.astro";
 ---
 
-<>
+<div class="wrapper">
   <section>
     <div class="row">
       <SkillCard 
@@ -29,11 +29,15 @@ import SkillCard from "./SkillCard.astro";
       project={project} />)}
     </div>
   </section>
-</>
+</div>
 
 <style>
+  .wrapper {
+    background-color: var(--color-white);
+  }
+
    section {
-    padding: 64px 32px;
+    padding: 32px 32px 64px 32px;
     display: flex;
     flex-direction: column;
     gap: 64px;

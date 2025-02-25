@@ -32,6 +32,10 @@ export const stacks: Stack[] = [
     label: "SCSS",
   },
   {
+    icon: "tailwindcss",
+    label: "TailwindCSS",
+  },
+  {
     icon: "html5",
     label: "HTML",
   },
