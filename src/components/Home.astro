@@ -6,6 +6,7 @@ import CopyField from "./CopyField.astro";
 import Link from "./Link.astro";
 import Tag from "./Tag.astro";
 import Text from "./Text.astro";
+import TextLink from "./TextLink.astro";
 import TimelineCard from "./TimelineCard.astro";
 ---
 
@@ -36,12 +37,26 @@ import TimelineCard from "./TimelineCard.astro";
       </div>
 
       <div id="timeline">
-        <TimelineCard year="🎓 2020" description="FCT UNESP - Computer Science" />
-        <TimelineCard year="👩‍💻 2021" description="Member of EJComp" />
-        <TimelineCard year="🗣 2022" description="Vice President of EJComp" />
-        <TimelineCard year="🚀 2023" description="President of EJComp\nIntern at Eventials" />
-        <TimelineCard year="📚 2024" description="Frontend Intern/Junior at Vlab" />
-        <TimelineCard year="📈 2025" description="Loading..." />
+        <TimelineCard year="🎓 2020">
+          <TextLink href="https://www.fct.unesp.br/#!/graduacao/ciencia-da-computacao/" label="FCT UNESP - Computer Science" />
+        </TimelineCard>
+        <TimelineCard year="👩‍💻 2021">
+          <Text weight={300}>Member of <TextLink href="https://ejcomp.com.br" label="EJComp" /></Text>
+        </TimelineCard>
+        <TimelineCard year="🗣 2022">
+          <Text weight={300}>Vice President of <TextLink href="https://ejcomp.com.br" label="EJComp" /></Text>
+        </TimelineCard>
+        <TimelineCard year="🚀 2023">
+          <Text weight={300}>President of <TextLink href="https://ejcomp.com.br" label="EJComp" /></br>Intern at <TextLink href="https://eventials.com" label="Eventials" /></Text>
+        </TimelineCard>
+        <TimelineCard year="📚 2024">
+          <Text weight={300}>Frontend Intern/Junior at <TextLink href="https://vlabhealth.com/v-baby" label="Vlab" /></Text>
+        </TimelineCard>
+        <TimelineCard year="📈 2025">
+          <Text weight={300}>
+            Freelancer</br>Loading...
+          </Text>
+        </TimelineCard>
       </div>
     </section>
 

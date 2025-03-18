@@ -1,0 +1,36 @@
+---
+
+interface Props {
+  href: string;
+  label: string;
+}
+
+const {href, label} = Astro.props;
+
+---
+
+<a target="_blank" href={href}>
+  {label}
+</a>
+
+<style>
+  a {
+    font-family: "Kanit";
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: transparent; 
+    background-clip: text;
+    -webkit-background-clip: text; 
+    background-image: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-secondary) 100%); 
+    background-size: 200% 100%; 
+    background-position: 100% 0; 
+    transition: background-position 0.3s linear; 
+  }
+
+  a:hover {
+    background-image: linear-gradient(90deg, rgba(255, 0, 39, 0.5) 0%, rgba(89, 0, 255, 0.5) 50%, var(--color-secondary) 100%); 
+    background-position: 0 0;
+  }
+
+</style>
