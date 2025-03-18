@@ -70,8 +70,11 @@
 
 body {
   line-height: 1;
-
   -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 img,

@@ -16,7 +16,7 @@ import TimelineCard from "./TimelineCard.astro";
         <CopyField value="karoldm1579@gmail.com" />
 
         <div class="actions">
-          <Link href="https://medium.com/@karoldm" label="Blog" />
+          <Link target="_self" href="#medium-articles" label="Blog" />
           <Link href="https://github.com/karoldm" label="Github" />
           <Link href="https://www.linkedin.com/in/karoldm/" label="Linkedin" />
           <!-- <Link href="" label="Notion" /> -->
@@ -109,10 +109,10 @@ import TimelineCard from "./TimelineCard.astro";
   }
 
   #timeline {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    overflow: hidden; 
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    width: 100%;
   }
 
   .inner-div {
@@ -149,6 +149,11 @@ import TimelineCard from "./TimelineCard.astro";
 
     section:last-child {
       padding: 32px 16px;
+    }
+
+    #timeline {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
     }
   }
 </style>

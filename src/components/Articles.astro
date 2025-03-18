@@ -1,0 +1,67 @@
+---
+import ArticleCard from "./ArticleCard.astro";
+import Text from "./Text.astro";
+import Link from "./Link.astro";
+
+const mediumRssUrl = "https://medium.com/feed/@karoldm";
+const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(mediumRssUrl)}`);
+const data = await response.json();
+
+const articles = data.status === "ok" ? data.items.slice(0, 4) : [];
+
+function extractThumbnail(html) {
+  const match = html.match(/<img[^>]+src="([^">]+)"/);
+  return match ? match[1] : null;
+}
+---
+
+<section id="medium-articles">
+  <div class="row">
+    <Text size="1.8rem" weight={800}>Latest posts</Text>
+    <Link href="https://medium.com/@karoldm" label="View all" />
+  </div>
+  <div id="container-articles">
+    {articles.map((article) => {
+      const thumbnail = extractThumbnail(article.content || article.description);
+      return (
+        <ArticleCard
+          title={article.title}
+          publishedAt={article.pubDate}
+          tags={article.categories}
+          link={article.link}
+          thumbnail={thumbnail}
+        />
+      );
+    })}
+  </div>
+</section>
+
+<style>
+  .row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 32px;
+  }
+
+  section {
+    padding: 32px 32px 80px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 32px;
+  }
+
+  #container-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 32px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 880px){
+    section {
+      padding: 16px 16px 80px 16px;
+    }
+  }
+</style>

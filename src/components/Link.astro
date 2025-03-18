@@ -6,9 +6,10 @@ interface Props {
   label: string;
   disabled?: boolean;
   tooltip?: string;
+  target?: string;
 }
 
-const { href, label, disabled = false, tooltip } = Astro.props;
+const { href, label, disabled = false, tooltip, target="_blanl" } = Astro.props;
 ---
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -34,7 +35,7 @@ const { href, label, disabled = false, tooltip } = Astro.props;
 
 <div class="tooltip-container">
   {!disabled ? (
-    <a class="link" href={href} target="_blank" aria-label={label}>{label}</a>
+    <a class="link" href={href} target={target} aria-label={label}>{label}</a>
   ) : (
     <span class:list={["disabled", "link"]}>{label}</span>
   )}
