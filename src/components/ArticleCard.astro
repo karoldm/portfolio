@@ -1,6 +1,6 @@
 ---
-import Text from "./Text.astro";
 import Tag from "./Tag.astro";
+import Text from "./Text.astro";
 
 interface Props {
   title: string;
@@ -15,7 +15,7 @@ const {title, publishedAt, tags, link, thumbnail} = Astro.props;
 
 <a target="_blank" href={link} class="article-card">
   <img src={thumbnail} />
-  <Text weight={600} lineHeight="1.4rem" color="var(--black)" size="1.2rem">{title}</Text>
+  <Text weight={600} lineHeight={1.4} color="var(--black)" size="1.2rem">{title}</Text>
   <Text weight={300} size=".6rem">{publishedAt}</Text>
   <div class="row">
     {tags.map(tag => <Tag label={tag} />)}
