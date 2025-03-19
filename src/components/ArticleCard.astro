@@ -6,7 +6,7 @@ interface Props {
   title: string;
   publishedAt: string;
   tags: string[];
-  thumbnail: string;
+  thumbnail: string | null;
   link: string;
 }
 
@@ -14,7 +14,7 @@ const {title, publishedAt, tags, link, thumbnail} = Astro.props;
 ---
 
 <a target="_blank" href={link} class="article-card">
-  <img src={thumbnail} />
+  <img src={thumbnail} alt="Article thumb" />
   <Text weight={600} lineHeight={1.4} color="var(--black)" size="1.2rem">{title}</Text>
   <Text weight={300} size=".6rem">{publishedAt}</Text>
   <div class="row">
