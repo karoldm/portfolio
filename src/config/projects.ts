@@ -49,9 +49,10 @@ import rotaseguraimage7 from "../assets/images/rota-segura/image7.png";
 import rotaseguraimage8 from "../assets/images/rota-segura/image8.png";
 import rotaseguraimage9 from "../assets/images/rota-segura/image9.png";
 
-import pokedexImage1 from "../assets/images/pokedex/image1.jpg";
-import pokedexImage2 from "../assets/images/pokedex/image2.jpg";
-import pokedexImage3 from "../assets/images/pokedex/image3.jpg";
+import techtaste1 from "../assets/images/techtaste/image1.webp";
+import techtaste2 from "../assets/images/techtaste/image2.webp";
+import techtaste3 from "../assets/images/techtaste/image3.webp";
+import techtaste4 from "../assets/images/techtaste/image4.webp";
 
 export const projects: ProjectInfo[] = [
   {
@@ -185,17 +186,17 @@ export const projects: ProjectInfo[] = [
     stackList: ["dart", "flutter", "firebase"],
   },
   {
-    title: "Pokedex",
+    title: "Techtaste",
     tags: ["Mobile"],
     description:
-      "A simple pokedex app that shows some pokemons from a public API.",
+      "Techtaste is a simples only interface delivery app where users can shopping your favorite dishes easly. The app was developed on Alura Immersion Flutter 2025!",
     links: [
       {
         label: "Repository",
-        href: "https://github.com/karoldm/pokedex",
+        href: "https://github.com/karoldm/techtaste/tree/main",
       },
     ],
-    images: [pokedexImage1, pokedexImage2, pokedexImage3],
+    images: [techtaste1, techtaste2, techtaste3, techtaste4],
     stackList: ["dart", "flutter"],
   },
 ];
