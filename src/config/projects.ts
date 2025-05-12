@@ -1,58 +1,71 @@
 import { ProjectInfo } from "../interfaces/project";
 
 // Import images
-import kboardImage1 from "../assets/images/kboard/image1.jpg";
-import kboardImage2 from "../assets/images/kboard/image2.jpg";
-import kboardImage3 from "../assets/images/kboard/image3.jpg";
-import kboardImage4 from "../assets/images/kboard/image4.jpg";
-import kboardImage5 from "../assets/images/kboard/image5.jpg";
-import kboardImage6 from "../assets/images/kboard/image6.jpg";
+import kboardImage1 from "../assets/images/kboard/image1.webp";
+import kboardImage2 from "../assets/images/kboard/image2.webp";
+import kboardImage3 from "../assets/images/kboard/image3.webp";
+import kboardImage4 from "../assets/images/kboard/image4.webp";
+import kboardImage5 from "../assets/images/kboard/image5.webp";
+import kboardImage6 from "../assets/images/kboard/image6.webp";
 
-import devbookImage1 from "../assets/images/devbook/image1.jpg";
-import devbookImage2 from "../assets/images/devbook/image2.jpg";
-import devbookImage3 from "../assets/images/devbook/image3.jpg";
+import devbookImage1 from "../assets/images/devbook/image1.webp";
+import devbookImage2 from "../assets/images/devbook/image2.webp";
+import devbookImage3 from "../assets/images/devbook/image3.webp";
 
-import letmeaskImage1 from "../assets/images/letmeask/image1.jpg";
-import letmeaskImage2 from "../assets/images/letmeask/image2.jpg";
-import letmeaskImage3 from "../assets/images/letmeask/image3.jpg";
-import letmeaskImage4 from "../assets/images/letmeask/image4.jpg";
-import letmeaskImage5 from "../assets/images/letmeask/image5.jpg";
-import letmeaskImage6 from "../assets/images/letmeask/image6.jpg";
-import letmeaskImage7 from "../assets/images/letmeask/image7.jpg";
+import letmeaskImage1 from "../assets/images/letmeask/image1.webp";
+import letmeaskImage2 from "../assets/images/letmeask/image2.webp";
+import letmeaskImage3 from "../assets/images/letmeask/image3.webp";
+import letmeaskImage4 from "../assets/images/letmeask/image4.webp";
+import letmeaskImage5 from "../assets/images/letmeask/image5.webp";
+import letmeaskImage6 from "../assets/images/letmeask/image6.webp";
+import letmeaskImage7 from "../assets/images/letmeask/image7.webp";
 
-import myplantsImage1 from "../assets/images/myplants/image1.jpg";
-import myplantsImage2 from "../assets/images/myplants/image2.jpg";
-import myplantsImage3 from "../assets/images/myplants/image3.jpg";
-import myplantsImage4 from "../assets/images/myplants/image4.jpg";
-import myplantsImage5 from "../assets/images/myplants/image5.jpg";
-import myplantsImage6 from "../assets/images/myplants/image6.jpg";
-import myplantsImage7 from "../assets/images/myplants/image7.jpg";
+import myplantsImage1 from "../assets/images/myplants/image1.webp";
+import myplantsImage2 from "../assets/images/myplants/image2.webp";
+import myplantsImage3 from "../assets/images/myplants/image3.webp";
+import myplantsImage4 from "../assets/images/myplants/image4.webp";
+import myplantsImage5 from "../assets/images/myplants/image5.webp";
+import myplantsImage6 from "../assets/images/myplants/image6.webp";
+import myplantsImage7 from "../assets/images/myplants/image7.webp";
 
-import notesImage1 from "../assets/images/notes/image1.jpg";
-import notesImage2 from "../assets/images/notes/image2.jpg";
-import notesImage3 from "../assets/images/notes/image3.jpg";
-import notesImage4 from "../assets/images/notes/image4.jpg";
-import notesImage5 from "../assets/images/notes/image5.jpg";
+import notesImage1 from "../assets/images/notes/image1.webp";
+import notesImage2 from "../assets/images/notes/image2.webp";
+import notesImage3 from "../assets/images/notes/image3.webp";
+import notesImage4 from "../assets/images/notes/image4.webp";
+import notesImage5 from "../assets/images/notes/image5.webp";
 
-import shorturlImage1 from "../assets/images/shorturl/image1.jpg";
-import shorturlImage2 from "../assets/images/shorturl/image2.jpg";
-import shorturlImage3 from "../assets/images/shorturl/image3.jpg";
+import shorturlImage1 from "../assets/images/shorturl/image1.webp";
+import shorturlImage2 from "../assets/images/shorturl/image2.webp";
+import shorturlImage3 from "../assets/images/shorturl/image3.webp";
 
-import rotaseguraimage1 from "../assets/images/rota-segura/image1.jpg";
-import rotaseguraimage10 from "../assets/images/rota-segura/image10.png";
-import rotaseguraimage2 from "../assets/images/rota-segura/image2.png";
-import rotaseguraimage3 from "../assets/images/rota-segura/image3.png";
-import rotaseguraimage4 from "../assets/images/rota-segura/image4.png";
-import rotaseguraimage5 from "../assets/images/rota-segura/image5.png";
-import rotaseguraimage6 from "../assets/images/rota-segura/image6.png";
-import rotaseguraimage7 from "../assets/images/rota-segura/image7.png";
-import rotaseguraimage8 from "../assets/images/rota-segura/image8.png";
-import rotaseguraimage9 from "../assets/images/rota-segura/image9.png";
+import rotaseguraimage1 from "../assets/images/rota-segura/image1.webp";
+import rotaseguraimage10 from "../assets/images/rota-segura/image10.webp";
+import rotaseguraimage2 from "../assets/images/rota-segura/image2.webp";
+import rotaseguraimage3 from "../assets/images/rota-segura/image3.webp";
+import rotaseguraimage4 from "../assets/images/rota-segura/image4.webp";
+import rotaseguraimage5 from "../assets/images/rota-segura/image5.webp";
+import rotaseguraimage6 from "../assets/images/rota-segura/image6.webp";
+import rotaseguraimage7 from "../assets/images/rota-segura/image7.webp";
+import rotaseguraimage8 from "../assets/images/rota-segura/image8.webp";
+import rotaseguraimage9 from "../assets/images/rota-segura/image9.webp";
 
 import techtaste1 from "../assets/images/techtaste/image1.webp";
 import techtaste2 from "../assets/images/techtaste/image2.webp";
 import techtaste3 from "../assets/images/techtaste/image3.webp";
 import techtaste4 from "../assets/images/techtaste/image4.webp";
+
+
+import bookstore1 from "../assets/images/bookstore/image1.webp";
+import bookstore2 from "../assets/images/bookstore/image2.webp";
+import bookstore3 from "../assets/images/bookstore/image3.webp";
+import bookstore4 from "../assets/images/bookstore/image4.webp";
+import bookstore5 from "../assets/images/bookstore/image5.webp";
+import bookstore6 from "../assets/images/bookstore/image6.webp";
+import bookstore7 from "../assets/images/bookstore/image7.webp";
+import bookstore8 from "../assets/images/bookstore/image8.webp";
+import bookstore9 from "../assets/images/bookstore/image9.webp";
+import bookstore10 from "../assets/images/bookstore/image10.webp";
+import bookstore11 from "../assets/images/bookstore/image11.webp";
 
 export const projects: ProjectInfo[] = [
   {
@@ -85,16 +98,37 @@ export const projects: ProjectInfo[] = [
     ],
   },
   {
-    title: "Devbook",
-    tags: ["Web"],
-    description:
-      "A web application to explore developer profiles using the GitHub API. It provides detailed information such as repositories, followers, most-used programming languages, and recent activity. Ideal for recruiters or enthusiasts who want to quickly and intuitively explore developer profiles.",
+    title: "Bookstore",
+    tags: ["Mobile", "Web", "Fullstack"],
+    description: "Bookstore is a user-friendly application designed to help bookstore owners and employees efficiently manage their inventory. The system allows administrators to add, edit, and organize books in the store’s catalog, including details such as title, author, and available stock. Employees can be added to the system with secure login access, enabling them to update stock levels",
     links: [
-      { label: "Frontend", href: "https://github.com/karoldm/devbook" },
-      { label: "Site", href: "https://devbook-d8fr.onrender.com/" },
+      { label: "Frontend", href: "https://github.com/karoldm/bookstore" },
+      { label: "Backend", href: "https://github.com/karoldm/bookstore-api" },
+      { label: "Site", href: "https://bookstore-636f3.web.app/" },
     ],
-    images: [devbookImage1, devbookImage2, devbookImage3],
-    stackList: ["react", "typescript", "styled-components"],
+    images: [
+      bookstore1,
+      bookstore2,
+      bookstore3,
+      bookstore4,
+      bookstore5,
+      bookstore6,
+      bookstore7,
+      bookstore8,
+      bookstore9,
+      bookstore10,
+      bookstore11,
+    ],
+    stackList: [
+      "flutter",
+      "dart",
+      "aws",
+      "java",
+      "spring",
+      "postgresql",
+      "firebase",
+      "docker",
+    ],
   },
   {
     title: "Letmeask",
@@ -115,6 +149,18 @@ export const projects: ProjectInfo[] = [
       letmeaskImage7,
     ],
     stackList: ["react", "typescript", "scss", "firebase"],
+  },
+  {
+    title: "Devbook",
+    tags: ["Web"],
+    description:
+      "A web application to explore developer profiles using the GitHub API. It provides detailed information such as repositories, followers, most-used programming languages, and recent activity. Ideal for recruiters or enthusiasts who want to quickly and intuitively explore developer profiles.",
+    links: [
+      { label: "Frontend", href: "https://github.com/karoldm/devbook" },
+      { label: "Site", href: "https://devbook-d8fr.onrender.com/" },
+    ],
+    images: [devbookImage1, devbookImage2, devbookImage3],
+    stackList: ["react", "typescript", "styled-components"],
   },
   {
     title: "MyPlants",
