@@ -66,6 +66,11 @@ import bookstore8 from "../assets/images/bookstore/image8.webp";
 import bookstore9 from "../assets/images/bookstore/image9.webp";
 import bookstore10 from "../assets/images/bookstore/image10.webp";
 import bookstore11 from "../assets/images/bookstore/image11.webp";
+import bookstore12 from "../assets/images/bookstore/image12.webp";
+import bookstore13 from "../assets/images/bookstore/image13.webp";
+import bookstore14 from "../assets/images/bookstore/image14.webp";
+import bookstore15 from "../assets/images/bookstore/image15.webp";
+import bookstore16 from "../assets/images/bookstore/image16.webp";
 
 export const projects: ProjectInfo[] = [
   {
@@ -118,6 +123,11 @@ export const projects: ProjectInfo[] = [
       bookstore9,
       bookstore10,
       bookstore11,
+      bookstore12,
+      bookstore13,
+      bookstore14,
+      bookstore15,
+      bookstore16,
     ],
     stackList: [
       "flutter",

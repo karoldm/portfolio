@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 interface Props {
   images: ImageMetadata[];
@@ -10,12 +10,16 @@ const { images } = Astro.props;
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const containers = document.querySelectorAll('.pic-ctn') as NodeListOf<HTMLDivElement>;
+    const containers = document.querySelectorAll(
+      ".pic-ctn",
+    ) as NodeListOf<HTMLDivElement>;
 
-    containers.forEach(container => {
-      const images = container.querySelectorAll('.pic') as NodeListOf<HTMLImageElement>;
-      const backAnimationTime = .2;
-      const nextAnimationTime = .5;
+    containers.forEach((container) => {
+      const images = container.querySelectorAll(
+        ".pic",
+      ) as NodeListOf<HTMLImageElement>;
+      const backAnimationTime = 0.2;
+      const nextAnimationTime = 0.5;
 
       function resetImages() {
         images.forEach((img, i) => {
@@ -24,9 +28,12 @@ const { images } = Astro.props;
           img.style.animation = `back ${backAnimationTime}s linear`;
           img.style.animationDelay = `${i * backAnimationTime}s`;
 
-          setTimeout(() => {
-            img.style.left = '0';
-          }, (i * backAnimationTime + backAnimationTime) * 1000);
+          setTimeout(
+            () => {
+              img.style.left = "0";
+            },
+            (i * backAnimationTime + backAnimationTime) * 1000,
+          );
         });
       }
 
@@ -35,7 +42,7 @@ const { images } = Astro.props;
           if (i === 0) {
             resetImages();
           } else {
-            img.style.left = '180px';
+            img.style.left = "180px";
             img.style.animation = `next ${nextAnimationTime}s linear`;
           }
         });
@@ -46,15 +53,17 @@ const { images } = Astro.props;
 
 <div>
   <div class="pic-ctn">
-    {images.map((src) => (
-      <Image
-        src={src}
-        alt="project image"
-        width={180} 
-        height={360} 
-        class="pic"
-      />
-    ))}
+    {
+      images.map((src) => (
+        <Image
+          src={src}
+          alt="project image"
+          width={180}
+          height={360}
+          class="pic"
+        />
+      ))
+    }
   </div>
 </div>
 
