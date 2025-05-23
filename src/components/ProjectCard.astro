@@ -1,10 +1,10 @@
 ---
-import { Icon } from 'astro-icon/components';
-import { ProjectInfo } from '../interfaces/project';
-import ImagesCarousel from './ImagesCarousel.astro';
-import Link from './Link.astro';
-import Tag from './Tag.astro';
-import Text from './Text.astro';
+import { Icon } from "astro-icon/components";
+import { type ProjectInfo } from "../interfaces/project";
+import ImagesCarousel from "./ImagesCarousel.astro";
+import Link from "./Link.astro";
+import Tag from "./Tag.astro";
+import Text from "./Text.astro";
 
 interface Props {
   project: ProjectInfo;
@@ -17,17 +17,21 @@ const { project } = Astro.props;
   <div class="column">
     <Icon size={32} name="github" />
     <div class="row">
-      <Text size='1rem' >{project.title}</Text>
+      <Text size="1rem">{project.title}</Text>
       <div class="row">
-        {project.tags.map(tag => <Tag highlight label={tag} />)}
+        {project.tags.map((tag) => <Tag highlight label={tag} />)}
       </div>
     </div>
-    <Text  weight={300} >{project.description}</Text>
+    <Text weight={300}>{project.description}</Text>
     <div class="row">
-      {project.stackList.map(icon => <Icon size={24} name={icon} />)}
+      {project.stackList.map((icon) => <Icon size={24} name={icon} />)}
     </div>
     <div class="row">
-      {project.links.map(link => <Link label={link.label} href={link.href} />)}
+      {
+        project.links.map((link) => (
+          <Link label={link.label} href={link.href} />
+        ))
+      }
     </div>
   </div>
   <ImagesCarousel images={project.images.reverse()} />
@@ -37,7 +41,7 @@ const { project } = Astro.props;
   .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 16px;
     padding: 32px;
     background-color: var(--color-background);
@@ -58,7 +62,7 @@ const { project } = Astro.props;
     justify-content: center;
     gap: 24px;
     flex-wrap: wrap;
-    max-width: 60%;
+    max-width: 54%;
   }
 
   .row {
@@ -70,7 +74,7 @@ const { project } = Astro.props;
   }
 
   @media screen and (max-width: 1024px) {
-    .column{
+    .column {
       max-width: 100%;
       width: 100%;
     }

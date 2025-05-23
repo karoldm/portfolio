@@ -77,6 +77,12 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
 img,
 picture,
 video,
@@ -106,6 +112,7 @@ h6 {
 p {
   word-wrap: break-word;
 }
+
 h1,
 h2,
 h3,
@@ -116,13 +123,12 @@ h6 {
 }
 
 .linear-text {
-  background-image: linear-gradient(
-    to right,
-    var(--color-border),
-    var(--color-text)
-  );
+  background-image: linear-gradient(to right,
+      var(--color-border),
+      var(--color-text));
   background-clip: text;
-  -webkit-background-clip: text; /* For Safari */
+  -webkit-background-clip: text;
+  /* For Safari */
   color: transparent !important;
   text-align: center;
 }
