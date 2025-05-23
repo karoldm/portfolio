@@ -1,4 +1,4 @@
-import { IconName } from "../interfaces/icon";
+import { type IconName } from "../interfaces/icon";
 
 type Stack = {
   label: string;
@@ -10,6 +10,7 @@ export const stacks: Stack[] = [
   {
     icon: "react",
     label: "Reactjs",
+    hightlight: true,
   },
   {
     icon: "storybook",
@@ -22,10 +23,12 @@ export const stacks: Stack[] = [
   {
     icon: "styled-components",
     label: "Styled Components",
+    hightlight: true,
   },
   {
     icon: "css",
     label: "CSS",
+    hightlight: true,
   },
   {
     icon: "scss",
@@ -38,14 +41,17 @@ export const stacks: Stack[] = [
   {
     icon: "html5",
     label: "HTML",
+    hightlight: true,
   },
   {
     icon: "javascript",
     label: "Javascript",
+    hightlight: true,
   },
   {
     icon: "typescript",
     label: "Typescript",
+    hightlight: true,
   },
   {
     icon: "java",
@@ -58,10 +64,12 @@ export const stacks: Stack[] = [
   {
     icon: "dart",
     label: "Dart",
+    hightlight: true,
   },
   {
     icon: "flutter",
     label: "Flutter",
+    hightlight: true,
   },
   {
     icon: "firebase",
@@ -82,10 +90,12 @@ export const stacks: Stack[] = [
   {
     icon: "git",
     label: "Git",
+    hightlight: true,
   },
   {
     icon: "github",
     label: "GitHub",
+    hightlight: true,
   },
   {
     icon: "c",

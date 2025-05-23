@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { IconName } from '../interfaces/icon';
+import {type IconName } from '../interfaces/icon';
 import Text from './Text.astro';
 
 interface Props {
@@ -42,8 +42,21 @@ const {iconName, label, color, highlight = false} = Astro.props
   }
 
   .highlight {
-    background: linear-gradient(90deg, rgba(255,0,39,0.5) 0%, rgba(89,0,255,0.5) 100%) !important;
     padding: 1px;
+    animation: highlight-animate 1s ease-out infinite;
+  }
+
+  @keyframes highlight-animate {
+    0% {
+      background: linear-gradient(90deg, rgba(255,0,39,0.5) 0%, rgba(89,0,255,0.5) 100%);
+    }
+    50% {
+      background: linear-gradient(90deg, rgba(89,0,255,0.5) 0%, rgba(255,0,39,0.5) 100%);
+    }
+    100% {
+      background: linear-gradient(90deg, rgba(255,0,39,0.5) 0%, rgba(89,0,255,0.5) 100%);
+    }
+    
   }
 
   .container {

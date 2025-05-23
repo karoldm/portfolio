@@ -77,12 +77,6 @@ html {
   scroll-behavior: smooth;
 }
 
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
 img,
 picture,
 video,
