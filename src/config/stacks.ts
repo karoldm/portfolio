@@ -105,4 +105,8 @@ export const stacks: Stack[] = [
     icon: "docker",
     label: "Docker",
   },
+  {
+    icon: "supabase", 
+    label: "Supabase",
+  }
 ];

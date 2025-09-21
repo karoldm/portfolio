@@ -1,4 +1,4 @@
-import { IconName } from "./icon";
+import type { IconName } from "./icon";
 
 interface LinkOptions {
   href: string;

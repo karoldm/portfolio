@@ -1,4 +1,4 @@
-import { ProjectInfo } from "../interfaces/project";
+import type { ProjectInfo } from "../interfaces/project";
 
 // Import images
 import kboardImage1 from "../assets/images/kboard/image1.webp";
@@ -49,12 +49,6 @@ import rotaseguraimage7 from "../assets/images/rota-segura/image7.webp";
 import rotaseguraimage8 from "../assets/images/rota-segura/image8.webp";
 import rotaseguraimage9 from "../assets/images/rota-segura/image9.webp";
 
-import techtaste1 from "../assets/images/techtaste/image1.webp";
-import techtaste2 from "../assets/images/techtaste/image2.webp";
-import techtaste3 from "../assets/images/techtaste/image3.webp";
-import techtaste4 from "../assets/images/techtaste/image4.webp";
-
-
 import bookstore1 from "../assets/images/bookstore/image1.webp";
 import bookstore2 from "../assets/images/bookstore/image2.webp";
 import bookstore3 from "../assets/images/bookstore/image3.webp";
@@ -71,6 +65,14 @@ import bookstore13 from "../assets/images/bookstore/image13.webp";
 import bookstore14 from "../assets/images/bookstore/image14.webp";
 import bookstore15 from "../assets/images/bookstore/image15.webp";
 import bookstore16 from "../assets/images/bookstore/image16.webp";
+
+import euAmoCozinhar1 from "../assets/images/euAmoCozinhar/image1.webp";
+import euAmoCozinhar2 from "../assets/images/euAmoCozinhar/image2.webp";
+import euAmoCozinhar3 from "../assets/images/euAmoCozinhar/image3.webp";
+import euAmoCozinhar4 from "../assets/images/euAmoCozinhar/image4.webp";
+import euAmoCozinhar5 from "../assets/images/euAmoCozinhar/image5.webp";
+import euAmoCozinhar6 from "../assets/images/euAmoCozinhar/image6.webp";
+import euAmoCozinhar7 from "../assets/images/euAmoCozinhar/image7.webp";
 
 export const projects: ProjectInfo[] = [
   {
@@ -242,17 +244,17 @@ export const projects: ProjectInfo[] = [
     stackList: ["dart", "flutter", "firebase"],
   },
   {
-    title: "Techtaste",
+    title: "Eu Amo Cozinhar",
     tags: ["Mobile"],
     description:
-      "Techtaste is a simples only interface delivery app where users can shopping your favorite dishes easly. The app was developed on Alura Immersion Flutter 2025!",
+      "Eu Amo Cozinhar is a recipe app that helps users discover and share their favorite recipes. With a user-friendly interface, it allows for easy navigation and recipe management. The project was developed during the \"Programa de Capacitação em Desenvolvimento Android e Multiplataforma Flutter.\" by Venturus.",
     links: [
       {
         label: "Repository",
-        href: "https://github.com/karoldm/techtaste/tree/main",
+        href: "https://github.com/karoldm/venturus-flutter/tree/main/recipes",
       },
     ],
-    images: [techtaste1, techtaste2, techtaste3, techtaste4],
-    stackList: ["dart", "flutter"],
+    images: [euAmoCozinhar1, euAmoCozinhar2, euAmoCozinhar3, euAmoCozinhar4, euAmoCozinhar5, euAmoCozinhar6, euAmoCozinhar7],
+    stackList: ["dart", "flutter", "supabase"],
   },
 ];
