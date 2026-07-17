@@ -83,7 +83,7 @@ export const projects: ProjectInfo[] = [
     links: [
       { label: "Frontend", href: "https://github.com/karoldm/k-board" },
       { label: "Backend", href: "https://github.com/karoldm/k-board-api" },
-      { label: "Site", href: "https://k-board.onrender.com" },
+      ////{ label: "Site", href: "https://k-board.onrender.com" },
     ],
     images: [
       kboardImage1,
@@ -107,11 +107,12 @@ export const projects: ProjectInfo[] = [
   {
     title: "Bookstore",
     tags: ["Mobile", "Web", "Fullstack"],
-    description: "Bookstore is a user-friendly application designed to help bookstore owners and employees efficiently manage their inventory. The system allows administrators to add, edit, and organize books in the store’s catalog, including details such as title, author, and available stock. Employees can be added to the system with secure login access, enabling them to update stock levels",
+    description:
+      "Bookstore is a user-friendly application designed to help bookstore owners and employees efficiently manage their inventory. The system allows administrators to add, edit, and organize books in the store’s catalog, including details such as title, author, and available stock. Employees can be added to the system with secure login access, enabling them to update stock levels",
     links: [
       { label: "Frontend", href: "https://github.com/karoldm/bookstore" },
       { label: "Backend", href: "https://github.com/karoldm/bookstore-api" },
-      { label: "Site", href: "https://bookstore-636f3.web.app/" },
+      //{ label: "Site", href: "https://bookstore-636f3.web.app/" },
     ],
     images: [
       bookstore1,
@@ -149,7 +150,7 @@ export const projects: ProjectInfo[] = [
       "An interactive platform for creating real-time Q&A rooms, perfect for live streams. Users can submit questions, upvote the most relevant ones, highlight important questions, and mark them as answered. The application is ideal for speakers, educators, or streamers looking to engage their audience.",
     links: [
       { label: "Frontend", href: "https://github.com/karoldm/letmeask" },
-      { label: "Site", href: "https://letmeask.onrender.com/" },
+      //{ label: "Site", href: "https://letmeask.onrender.com/" },
     ],
     images: [
       letmeaskImage1,
@@ -169,7 +170,7 @@ export const projects: ProjectInfo[] = [
       "A web application to explore developer profiles using the GitHub API. It provides detailed information such as repositories, followers, most-used programming languages, and recent activity. Ideal for recruiters or enthusiasts who want to quickly and intuitively explore developer profiles.",
     links: [
       { label: "Frontend", href: "https://github.com/karoldm/devbook" },
-      { label: "Site", href: "https://devbook-d8fr.onrender.com/" },
+      //{ label: "Site", href: "https://devbook-d8fr.onrender.com/" },
     ],
     images: [devbookImage1, devbookImage2, devbookImage3],
     stackList: ["react", "typescript", "styled-components"],
@@ -200,7 +201,7 @@ export const projects: ProjectInfo[] = [
       "A versatile note-taking app that allows users to record notes in text or audio format, with automatic audio-to-text transcription. Ideal for quickly capturing ideas, reminders, or tasks during meetings, studies, or daily life.",
     links: [
       { label: "Frontend", href: "https://github.com/karoldm/notes" },
-      { label: "Site", href: "https://karoldm.github.io/notes/" },
+      //{ label: "Site", href: "https://karoldm.github.io/notes/" },
     ],
     images: [notesImage1, notesImage2, notesImage3, notesImage4, notesImage5],
     stackList: ["tailwindcss", "react", "typescript"],
@@ -213,7 +214,7 @@ export const projects: ProjectInfo[] = [
     links: [
       { label: "Frontend", href: "https://github.com/karoldm/short-url" },
       { label: "Backend", href: "https://github.com/karoldm/short-url-client" },
-      { label: "Site", href: "https://karoldm.github.io/short-url-client/" },
+      //{ label: "Site", href: "https://karoldm.github.io/short-url-client/" },
     ],
     images: [shorturlImage1, shorturlImage2, shorturlImage3],
     stackList: ["angular", "aws", "java"],
@@ -247,14 +248,22 @@ export const projects: ProjectInfo[] = [
     title: "Eu Amo Cozinhar",
     tags: ["Mobile"],
     description:
-      "Eu Amo Cozinhar is a recipe app that helps users discover and share their favorite recipes. With a user-friendly interface, it allows for easy navigation and recipe management. The project was developed during the \"Programa de Capacitação em Desenvolvimento Android e Multiplataforma Flutter.\" by Venturus.",
+      'Eu Amo Cozinhar is a recipe app that helps users discover and share their favorite recipes. With a user-friendly interface, it allows for easy navigation and recipe management. The project was developed during the "Programa de Capacitação em Desenvolvimento Android e Multiplataforma Flutter." by Venturus.',
     links: [
       {
         label: "Repository",
         href: "https://github.com/karoldm/venturus-flutter/tree/main/recipes",
       },
     ],
-    images: [euAmoCozinhar1, euAmoCozinhar2, euAmoCozinhar3, euAmoCozinhar4, euAmoCozinhar5, euAmoCozinhar6, euAmoCozinhar7],
+    images: [
+      euAmoCozinhar1,
+      euAmoCozinhar2,
+      euAmoCozinhar3,
+      euAmoCozinhar4,
+      euAmoCozinhar5,
+      euAmoCozinhar6,
+      euAmoCozinhar7,
+    ],
     stackList: ["dart", "flutter", "supabase"],
   },
 ];
